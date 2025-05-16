@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login do Professor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f7f7f7;
+      color: #000;
+    }
+    header {
+      background-color: #c80000;
+      padding: 15px 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+    main {
+      max-width: 480px;
+      background: white;
+      margin: 40px auto;
+      padding: 30px 35px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #1f2957;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-style: italic;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      color: #c80000;
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    input[type="text"], input[type="password"], select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-style: italic;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 30px;
+      background-color: #c80000;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 12px 0;
+      width: 100%;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>SenaiPiracicaba</div>
+    <div class="menu-icon">&#9776;</div>
+  </header>
+
+  <main>
+    <h2>Login do Professor</h2>
+    <p>Digite seu e-mail e senha para acessar</p>
+
+    <form id="loginForm">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo..." />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite a senha" />
+
+      <label for="curso">Selecione o curso</label>
+      <select id="curso" name="curso">
+        <option value="">Selecione o curso</option>
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="informatica">Informática</option>
+      </select>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // evita o reload
+
+      const nome = document.getElementById('nome').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+      const curso = document.getElementById('curso').value;
+
+      if (!nome) {
+        alert('Por favor, preencha o nome completo.');
+        return;
+      }
+      if (!senha) {
+        alert('Por favor, preencha a senha.');
+        return;
+      }
+      if (!curso) {
+        alert('Por favor, selecione o curso.');
+        return;
+      }
+
+      // Se tudo ok, redireciona para a página 7 (Painel do Professor)
+      window.location.href = 'painel-professor.html'; // nome do arquivo da página 7
+    });
+  </script>
+</body>
+</html>

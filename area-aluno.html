@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Área do Aluno</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #c40000;
+      padding: 15px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 80px;
+      padding: 60px 30px;
+      flex-wrap: wrap;
+    }
+
+    .info-aluno {
+      max-width: 300px;
+    }
+
+    .info-aluno h2 {
+      color: #2e2e52;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .info-aluno h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .info-aluno .destaque {
+      color: #c40000;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .info-aluno .descricao {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .box-qr {
+      background-color: #2e2e52;
+      border-radius: 30px;
+      padding: 30px 40px;
+      text-align: center;
+      width: 360px;
+    }
+
+    .box-qr img {
+      width: 190px;
+      height: 190px;
+      margin-bottom: 20px;
+    }
+
+    .url-box {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 10px auto;
+      width: fit-content;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .qr-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .qr-buttons button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .qr-buttons button:hover {
+      background-color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+      }
+
+      .box-qr {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="cadastro.html">&#8592;</a>
+  </header>
+
+  <div class="container">
+    <div class="info-aluno">
+      <h2>Área do Aluno</h2>
+      <h3>Cecília Silva<br>2º ano do Ensino médio</h3>
+      <div class="destaque">Geração automática de Qr Code</div>
+      <div class="descricao">
+        Este Qr Code é único e intransferível para cada aluno.
+      </div>
+    </div>
+
+    <div class="box-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=190x190&data=https://qrcode.senai" alt="QR Code">
+      <div class="url-box">www.qrcode.senai</div>
+      <div class="qr-buttons">
+        <button onclick="navigator.clipboard.writeText('https://qrcode.senai')">Copiar</button>
+        <button onclick="window.open('https://qrcode.senai')">Baixar</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

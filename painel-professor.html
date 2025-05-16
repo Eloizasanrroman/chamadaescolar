@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel do Professor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f7f7f7;
+      color: #000;
+    }
+
+    header {
+      background-color: #c80000;
+      padding: 15px 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 480px;
+      background: white;
+      margin: 40px auto;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 5px;
+      color: #1f2957; /* azul escuro do mockup */
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #000;
+    }
+
+    label {
+      font-weight: bold;
+      color: #c80000;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .estudantes-container {
+      background: #eaeaea;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      color: #333;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .estudantes-container h4 {
+      margin: 10px 0 8px 0;
+      font-weight: bold;
+      color: #c80000;
+    }
+
+    .estudantes-lista {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .estudantes-lista li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .estudantes-lista li img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    .ver-mais {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      cursor: pointer;
+      border-top: 1px solid #ccc;
+      padding-top: 5px;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        margin: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>SenaiPiracicaba</div>
+    <div class="menu-icon">&#9776;</div>
+  </header>
+
+  <main>
+    <h2>Painel do Professor</h2>
+    <h3>Antonieta Silva</h3>
+    <p><em>Professora de Matemática</em></p>
+
+    <label for="turma">Selecione a turma</label>
+    <select id="turma" name="turma">
+      <option disabled selected>Selecionar...</option>
+      <option>Turma 1</option>
+      <option>Turma 2</option>
+      <option>Turma 3</option>
+    </select>
+
+    <label for="horario">Selecione o horário da chamada</label>
+    <input type="text" id="horario" name="horario" placeholder="Data | Horário" />
+
+    <div class="estudantes-container">
+      <h4>Estudantes Presentes</h4>
+      <ul class="estudantes-lista">
+        <li><img src="https://i.pravatar.cc/32?img=47" alt="Cecília Silva" /> Cecília Silva</li>
+        <li><img src="https://i.pravatar.cc/32?img=12" alt="Alex Rocha" /> Alex Rocha</li>
+        <li><img src="https://i.pravatar.cc/32?img=32" alt="Eduardo Ferreira" /> Eduardo Ferreira</li>
+      </ul>
+      <div class="ver-mais">Ver mais...</div>
+
+      <h4>Estudantes Ausentes</h4>
+      <ul class="estudantes-lista">
+        <li><img src="https://i.pravatar.cc/32?img=15" alt="Mariana Santos" /> Mariana Santos</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

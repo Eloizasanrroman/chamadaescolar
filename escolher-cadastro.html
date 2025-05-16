@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escolha o Tipo de Cadastro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f6f6;
+    }
+
+    header {
+      background-color: #c40000;
+      color: white;
+      padding: 15px 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .title {
+      color: #c40000;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: #1e2140;
+      color: white;
+      width: 140px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      background-color: #2b2f5c;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>SenaiPiracicaba</header>
+
+  <div class="container">
+    <div class="title">Escolha uma das opções</div>
+    <div class="options">
+      <a href="cadastro.html">
+        <div class="box">Aluno</div>
+      </a>
+      <a href="login-professor.html">
+        <div class="box">Professor</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

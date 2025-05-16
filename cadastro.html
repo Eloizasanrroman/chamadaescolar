@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - SenaiPiracicaba</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://www.transparenttextures.com/patterns/concrete-wall.png'), #f9f9f9;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #c40000;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container h2 {
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .container p a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>SenaiPiracicaba</strong></div>
+    <div class="menu-icon">&#9776;</div>
+  </header>
+
+  <div class="container">
+    <h2>CADASTRE-SE</h2>
+    <p>Já possui conta? <a href="login.html">Entrar</a></p>
+
+    <form action="area-aluno.html">
+      <input type="text" placeholder="Nome completo..." required />
+      <select required>
+        <option disabled selected>Selecione o curso</option>
+        <option>Informática</option>
+        <option>Eletrotécnica</option>
+        <option>Mecânica</option>
+      </select>
+      <select required>
+        <option disabled selected>Selecione a turma</option>
+        <option>1º Ano</option>
+        <option>2º Ano</option>
+        <option>3º Ano</option>
+      </select>
+      <input type="submit" value="Cadastrar" />
+    </form>
+  </div>
+
+</body>
+</html>
